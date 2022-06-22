@@ -17,6 +17,9 @@ class RawData:
 
 
 def check_data_name_validity(fem_material,noise_level):
+    """
+    
+    """
     material_list = ['NeoHookeanJ2', 'NeoHookeanJ4', 'Isihara', 'HainesWilson', 'GentThomas','ArrudaBoyce','Ogden','Ogden3','Anisotropy','PDMS','Holzapfel']
     noise_list = ['none','low','high']
     if fem_material not in material_list:
@@ -28,7 +31,10 @@ def check_data_name_validity(fem_material,noise_level):
 
 
 def get_data(rng, fem_dir, prefix, fem_material, noise_level, loadstep, feature_filter):
-
+    """
+    
+    """
+    
     prefix = fem_dir+prefix+fem_res+'_noise='+noise_level+'/'+fem_material;
     if(prefix[-1]=='/'):
         prefix = prefix[0:-1]
@@ -113,7 +119,10 @@ def filter_raw_data(rng, raw_data, filter_value):
 
 
 def process_raw_data(raw_data_set, lambda_r):
-
+    """
+    
+    """
+    
     D = raw_data_set[0].A1
     y = raw_data_set[0].b1
 

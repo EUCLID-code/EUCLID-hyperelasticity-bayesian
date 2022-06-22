@@ -15,6 +15,9 @@ import numpy as np
 from features_library import *
 
 def print_solution(theta):
+    """
+    
+    """
     print(np.expand_dims(theta.squeeze(),axis=1))
 
 def post_proc(chain, theta_gt, feature_filter, fem_mat, energy_func, fig_title, fig_title2, fig_dir = None, plotting=True, interactive_job=True):

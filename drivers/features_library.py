@@ -8,6 +8,9 @@ from config import *
 
 
 def get_mass_type():
+    """
+    
+    """
 
     mass_type = "lumped" #Can be made 'consistent' otherwise
 
@@ -249,6 +252,9 @@ def getNumberOfFeatures():
 
 
 def computeFeatures_numpy(F11, F12, F21, F22):
+    """
+    
+    """
     #Adapted from first EUCLID paper's code with modifications
     #(replacing torch with numpy)
 

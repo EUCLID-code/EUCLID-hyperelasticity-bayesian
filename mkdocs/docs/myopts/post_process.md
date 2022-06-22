@@ -23,5 +23,4 @@ _Input Arguments_
 
 #### `print_solution(theta):`
 
-
-post_proc(chain, theta_gt, feature_filter, fem_mat, energy_func, fig_title, fig_title2, fig_dir = None, plotting=True, interactive_job=True):
+
