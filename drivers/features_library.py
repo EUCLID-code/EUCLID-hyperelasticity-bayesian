@@ -15,7 +15,6 @@ def get_mass_type():
 
 
 def computeFeatures_torch(I1, I2, I3, Ia, Ib):
-
     """
     Compute the features dependent on the right Cauchy-Green strain invariants.
     Note that the features only depend on I1 and I3 for plane strain assumption.
@@ -154,6 +153,7 @@ def computeFeatures_torch(I1, I2, I3, Ia, Ib):
 def get_theta_gt(fem_path, feature_filter):
     """
     Returns the true feature coefficients corresponding to the benchmark material.
+    
     """
 
     n_f = getNumberOfFeatures()
