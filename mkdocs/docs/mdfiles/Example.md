@@ -44,4 +44,4 @@ The figure below shows a snippet of code progress as the chains are constructed 
 
 The main output of the code is the `chain` object whose `theta` attribute contains a distribution of the discovered feature coefficients. These discovered feature coefficients are used to make the violin plots and energy evolution plots as shown below.
 
-![Output](../drivers/ArrudaBoyce, noise=low.png "Output figure showing discovered feature coefficients")
+![Output](ArrudaBoyce, noise=low.png "Output figure showing discovered feature coefficients")
