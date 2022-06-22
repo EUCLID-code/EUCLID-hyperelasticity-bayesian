@@ -1,0 +1,22 @@
+site_name: Bayesian-EUCLID / Hyperelasticity
+site_url: https://euclid-code.github.io/
+nav:
+    - Home: index.md
+    - Publication: publication.md
+    - Code/Data: code_data.md
+    - Example: mdfiles/Example.md
+    - Code:
+        - config: mdfiles/config.md
+        - core_spike_slab: mdfiles/core_spike_slab.md
+        - data_definitions: mdfiles/data_definitions.md
+        - features_library: myopts/features_library.md
+        - helper: mdfiles/helper.md
+        - load_fem_data: myopts/load_fem_data.md
+        - main_hss: mdfiles/main_hss.md
+        - post_process: myopts/post_process.md
+        - preprocess_data: myopts/preprocess_data.md
+        - truncated_multivariate_normal: mdfiles/truncated_multivariate_normal.md
+        - unsupervised_hyperelasticity: myopts/unsupervised_hyperelasticity.md
+        - utilities: myopts/utilities.md
+
+theme: readthedocs
