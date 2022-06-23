@@ -16,7 +16,6 @@ nav:
         - main_hss: mdfiles/main_hss.md
         - post_process: myopts/post_process.md
         - preprocess_data: myopts/preprocess_data.md
-        - truncated_multivariate_normal: mdfiles/truncated_multivariate_normal.md
         - unsupervised_hyperelasticity: myopts/unsupervised_hyperelasticity.md
         - utilities: myopts/utilities.md
 
