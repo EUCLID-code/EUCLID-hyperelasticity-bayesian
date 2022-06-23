@@ -30,9 +30,9 @@ def computeFeatures_torch(I1, I2, I3, Ia, Ib):
 
     - `I3` - 3rd invariant
 
-    - 'Ia' - Invariant along anisotropy direction.
+    - `Ia` - Invariant along anisotropy direction.
 
-    - 'Ib' - Invariant along second anisotropy direction.
+    - `Ib` - Invariant along second anisotropy direction.
 
     _Output Arguments_
 
