@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://euclid-code.github.io/myopts/unsupervised_hyperelasticity/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>unsupervised_hyperelasticity - Bayesian-EUCLID / Hyperelasticity</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "unsupervised_hyperelasticity";
+        var mkdocs_page_input_path = "myopts\\unsupervised_hyperelasticity.md";
+        var mkdocs_page_url = "/myopts/unsupervised_hyperelasticity/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Bayesian-EUCLID / Hyperelasticity
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../publication/">Publication</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../code_data/">Code/Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/Example/">Example</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/config/">config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/core_spike_slab/">core_spike_slab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/data_definitions/">data_definitions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../features_library/">features_library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/helper/">helper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../load_fem_data/">load_fem_data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mdfiles/main_hss/">main_hss</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../post_process/">post_process</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preprocess_data/">preprocess_data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">unsupervised_hyperelasticity</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities/">utilities</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Bayesian-EUCLID / Hyperelasticity</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Code &raquo;</li><li>unsupervised_hyperelasticity</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h4 id="check_data_name_validityfem_materialnoise_level"><code>check_data_name_validity(fem_material,noise_level):</code></h4>
+<h4 id="filter_raw_datarng-raw_data-filter_value"><code>filter_raw_data(rng, raw_data, filter_value):</code></h4>
+<p>Randomly sub-sampling <code>filter_value</code> degrees of freedom from the data available at all quadrature points in <code>raw_data</code></p>
+<p><em>Input Arguments</em></p>
+<p>-<code>rng</code> - Random number generator</p>
+<p>-<code>raw_data</code> - Contains <code>D</code> (derivatives of feature library) and <code>y</code> (inertia terms and reaction forces) evaluated at all quadrature points</p>
+<p>-<code>filter_value</code> - Number of degrees of freedom subsampled from the original data</p>
+<p><em>Output Arguments</em></p>
+<ul>
+<li><code>RawData(A1, b1, A2, b2, dof_x, dof_y)</code> - Object of class <code>RawData</code> which is constructed from subsampled data</li>
+</ul>
+<hr />
+<h4 id="get_datarng-fem_dir-prefix-fem_material-noise_level-loadstep-feature_filter"><code>get_data(rng, fem_dir, prefix, fem_material, noise_level, loadstep, feature_filter):</code></h4>
+<h4 id="predict_energy_pathchain-theta_gt-fem_mat-feature_filter-deformation"><code>predict_energy_path(chain, theta_gt, fem_mat, feature_filter, deformation):</code></h4>
+<p>Predicts the energy deformation evolution for predicted and true material models along six deformation paths:
+i.) uniaxial tension, ii.) uniaxial compression, iii.) simple shear, iv.) biaxial tension, v.) biaxial compression, vi.) pure shear</p>
+<p><em>Input Arguments</em></p>
+<p>-<code>chain</code> - Object of class <code>Chain</code> (see <code>core_spike_slab</code> file)</p>
+<p>-<code>theta_gt</code> - The true set of feature coefficients for the benchmark material</p>
+<p>-<code>fem_mat</code> - The name of the benchmark material to be tested</p>
+<p>-<code>feature_filter</code> - The list of features to retain for constructing the Markov chain. Suppressed features will be highlighted with a red patch in the plot</p>
+<p>-<code>deformation</code> - Name of deformation path to be evaluated</p>
+<p><em>Output Arguments</em></p>
+<p>-<code>gamma</code> - Numpy array of different values for the deformation parameter</p>
+<p>-<code>energy_mean</code> - Energy corresponding to mean value of <code>theta</code> (feature coefficients) across different members of the Markov chain</p>
+<p>-<code>energy_plus</code> - 97.5 percentile energy branch across different members of the Markov chain</p>
+<p>-<code>energy_minus</code> - 2.5 percentile energy branch across different members of the Markov chain</p>
+<p>-<code>energy_gt</code> - Energy corresponding to the true feature coefficients</p>
+<p>-<code>energy</code> - Numpy array containing energy of all chain members at all deformation parameters</p>
+<hr />
+<h4 id="process_raw_dataraw_data_set-lambda_r"><code>process_raw_data(raw_data_set, lambda_r):</code></h4>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../preprocess_data/" class="btn btn-neutral float-left" title="preprocess_data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utilities/" class="btn btn-neutral float-right" title="utilities">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../preprocess_data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utilities/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
