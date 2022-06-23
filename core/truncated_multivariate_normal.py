@@ -108,8 +108,8 @@ class TruncatedMVN:
         # Cholesky decomposition of matrix with permuation
         self.unscaled_L, self.perm = self.colperm()
         D = np.diag(self.unscaled_L)
-        if np.any(D < self.eps):
-            print('Warning: Method might fail as covariance matrix is singular!')
+        #if np.any(D < self.eps):
+            #print('Warning: Method might fail as covariance matrix is singular!')
 
         # rescale
         scaled_L = self.unscaled_L / np.tile(D.reshape(self.dim, 1), (1, self.dim))
@@ -125,8 +125,8 @@ class TruncatedMVN:
 
         # find optimal tilting parameter non-linear equation solver
         sol = optimize.root(gradpsi, x0, args=(self.L, self.lb, self.ub), method='hybr', jac=True)
-        if not sol.success:
-            print('Warning: Method may fail as covariance matrix is close to singular!')
+        #if not sol.success:
+            #print('Warning: Method may fail as covariance matrix is close to singular!')
         self.x = sol.x[:self.dim - 1]
         self.mu = sol.x[self.dim - 1:]
 
