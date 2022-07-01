@@ -1,6 +1,6 @@
 # `class Chain:`
 
-Refer to the hierarchical Bayesian model discussed in [the Bayesian-EUCLID paper](https://arxiv.org/abs/2203.07422) (Fig. 2) for details regarding the parameters.
+Refer to the hierarchical Bayesian model discussed in [the Bayesian-EUCLID paper](https://doi.org/10.1016/j.cma.2022.115225) (Fig. 2) for details regarding the parameters.
 
 _Attributes_
 

@@ -20,7 +20,7 @@ The figure below shows a snippet of the `config.py` file, which contains the ini
 
 `filter_value` is the number of degrees of freedom subsampled from the available data at all quadrature points. In this case, at total of 100 degrees of freedom are subsampled from a total of 2752 data points.
 
-`a_v, b_v, a_p, b_p, a_sigma` and `b_sigma` are the hierarchical spike slab hyperparameters shown in Fig. 2 in [the Bayesian-EUCLID paper](https://arxiv.org/abs/2203.07422).
+`a_v, b_v, a_p, b_p, a_sigma` and `b_sigma` are the hierarchical spike slab hyperparameters shown in Fig. 2 in [the Bayesian-EUCLID paper](https://doi.org/10.1016/j.cma.2022.115225).
 
 `chain_length` is the length of each individual Markov chain used to sample the posterior probability distribution. In this case a chain length of 1000 was used.
 
@@ -28,7 +28,7 @@ The figure below shows a snippet of the `config.py` file, which contains the ini
 
 `parallel_chains` is the total number of chains used to sample the posterior probability distribution. A total of 4 chains were used in this work, which were later merged into a single chain of length 3000 elements, after the first 250 elements of each chain was discarded.
 
-`theta_fiber` and `theta_fiber2` are the assumed orientation angles of the two fibers considered in the feature library. Two fibers suffice for the Holzapfel benchmark considered in this work. Also, as per the work by [Dong and Sun, (2021)](https://doi.org/10.1016/j.jmps.2021.104377), any symmetrical distribution of arbitrary number fibers can be equivalently resolved into a two-fiber system along the directions of symmetry. Appendix C of the [the Bayesian-EUCLID paper](https://arxiv.org/abs/2203.07422) discusses the effect of assuming incorrect directions ($\pm45^{\circ}$) for the fibers.
+`theta_fiber` and `theta_fiber2` are the assumed orientation angles of the two fibers considered in the feature library. Two fibers suffice for the Holzapfel benchmark considered in this work. Also, as per the work by [Dong and Sun, (2021)](https://doi.org/10.1016/j.jmps.2021.104377), any symmetrical distribution of arbitrary number fibers can be equivalently resolved into a two-fiber system along the directions of symmetry. Appendix C of the [the Bayesian-EUCLID paper](https://doi.org/10.1016/j.cma.2022.115225) discusses the effect of assuming incorrect directions ($\pm45^{\circ}$) for the fibers.
 
 The figures below show snippets of code execution in Anaconda Powershell Prompt. The `main_hss.py` file is run with the shown arguments. In the first case, the quasistatic Arruda-Boyce benchmark data is selected, while in the second the dynamic Arruda-Boyce benchmark data is selected.
 
