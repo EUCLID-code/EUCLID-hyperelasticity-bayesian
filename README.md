@@ -4,7 +4,7 @@
 
 - A. Joshi, P. Thakolkaran, Y. Zheng, M. Escande, M. Flaschel, L. De Lorenzis, S. Kumar. **Bayesian-EUCLID: discovering hyperelastic material laws with uncertainties**, *Computer Methods in Applied Mechanics and Engineering*, 398 (2022) 115225. https://doi.org/10.1016/j.cma.2022.115225
 
-Typo corrections in the original article is described here: 
+Typo corrections in the original article is described here: https://github.com/EUCLID-code/EUCLID-hyperelasticity-bayesian/blob/main/bayesian-euclid-corrections.pdf
 
 The Bayesian-EUCLID framework offers a novel way to discover the model of hyperelastic materials
 using experimentally available displacement field and reaction force data. An overview of the
