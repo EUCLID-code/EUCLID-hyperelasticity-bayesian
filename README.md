@@ -2,7 +2,7 @@
 
 **EUCLID** stands for *Efficient Unsupervised Constitutive Law Identification and Discovery*. Visit the [project website](https://euclid-code.github.io/) to learn more and refer to the [online documentation](https://euclid-code.github.io/EUCLID-hyperelasticity-bayesian/mkdocs/site/) for more explanation on the individual software components. Within the scope of this project we developed Bayesian-EUCLID:
 
-- A. Joshi, P. Thakolkaran, Y. Zheng, M. Escande, M. Flaschel, L. De Lorenzis, S. Kumar, **Bayesian-EUCLID: discovering hyperelastic material laws with uncertainties**, *Computer Methods in Applied Mechanics and Engineering*, 398 (2022) 115225. https://doi.org/10.1016/j.cma.2022.115225
+- A. Joshi, P. Thakolkaran, Y. Zheng, M. Escande, M. Flaschel, L. De Lorenzis, S. Kumar. **Bayesian-EUCLID: discovering hyperelastic material laws with uncertainties**, *Computer Methods in Applied Mechanics and Engineering*, 398 (2022) 115225. https://doi.org/10.1016/j.cma.2022.115225
 
 Typo corrections in the original article is described here: 
 
